@@ -258,8 +258,6 @@ ENTRY_POINTS = {
     'obspy.plugin.waveform.KNET': [
         'isFormat = obspy.io.nied.knet.core:_is_knet_ascii',
         'readFormat = obspy.io.nied.knet.core:_read_knet_ascii',
-        'isFormat = obspy.io.knet.core:_is_knet_ascii',
-        'readFormat = obspy.io.knet.core:_read_knet_ascii',
         ],
     'obspy.plugin.event': [
         'QUAKEML = obspy.io.quakeml.core',
