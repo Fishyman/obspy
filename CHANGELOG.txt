@@ -18,9 +18,9 @@ master:
    * Support for additional event data formats:
      - CMTSOLUTION files used by many waveform solvers.
      - ESRI shapefile write support, useful in GIS applications (see #1066)
+     - Read support for the NIED's moment tensor TEXT format (see #1125)
    * Support for additional station data formats:
      - The FDSN web service station text format can now be read.
-     - Read support for the NIED's moment tensor TEXT format (see #1125)
  - obspy.core:
    * New method for generating sliding windows from Stream/Trace windows.
      (see #860)
