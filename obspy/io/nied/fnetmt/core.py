@@ -148,9 +148,7 @@ def __read_fnetmt_catalog(buf, **kwargs):
 
     # First read the headerlines containing the data request parameters
     headerlines = []
-    while True:
-        if buf.tell() >= size:
-            break
+    while buf.tell() < size:
         line = buf.readline().decode()
         if line.find('Total Number') != -1:
             match = re.search(r'Total Number:\s+(\d+)\s+', line)
@@ -162,9 +160,7 @@ def __read_fnetmt_catalog(buf, **kwargs):
     cur_pos = buf.tell()
 
     # Now read the catalog
-    while True:
-        if buf.tell() >= size:
-            break
+    while buf.tell() < size:
         line = buf.readline().strip()
         # If there is something, jump back to the beginning of the line and
         # read the next event.
