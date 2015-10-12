@@ -13,7 +13,7 @@ from obspy.io.nied.fnetmt.core import _is_fnetmt_catalog
 
 class FNETMTCatalogReadingTestCase(unittest.TestCase):
     """
-    Test everything related to the reading an F-net moment tensor catalog.
+    Test everything related to reading an F-net moment tensor catalog.
     """
     def setUp(self):
         # Directory where the test files are located
@@ -37,7 +37,7 @@ class FNETMTCatalogReadingTestCase(unittest.TestCase):
 
     def test_read_fnetmt_catalog_from_bytes_io(self):
         """
-        Tests that reading an F-net moment tensor file from an BytesIO objects
+        Tests that reading an F-net moment tensor file from a BytesIO objects
         works.
         """
         testfile = os.path.join(self.path, 'data', 'FNETMTCATALOG')
